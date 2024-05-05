@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+ html {
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: transparent !important;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.watch {
+    position: absolute;
+    left: 56%;
+    bottom: 635px;
+    transform: translate(-50%, 100%);
+    width: 967px;
+    height: 651px;
+    background-image: url("../img/pocketwatch.png");
+    background-size: cover;
+    z-index: 11;
+} 
+
+.label {
+    position: absolute;
+    left: 50%;
+    bottom: 91px;
+    transform: translate(-50%, 100%);
+    text-shadow: 1px -1px 20px black;
+    line-height: inherit;
+    font-size: 2vh;
+    color: #f8f9fa;
+    z-index: 3;
+    font-weight: bolder;
+    font-family: 'Century Gothic';
+}
+
+.container {
+    position: absolute;
+    left: 59.7%;
+    bottom: 367px;
+    transform: translate(-50%, 100%);
+    width: 161px;
+    height: 145px;
+    border-radius: 50%;
+    background-color: #28a745 ;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .half-right,
+  .half-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    overflow: hidden;
+  }
+  .half-right:after,
+  .half-left:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c6c7be;
+  }
+  .half-right {
+    left: 50%;
+    right: 0;
+  }
+  .half-right:after {
+    right: 100%;
+    transform-origin: center right;
+  }
+  .half-left {
+    left: 0;
+    right: 50%;
+  }
+  .half-left:after {
+    left: 100%;
+    transform-origin: center left;
+  }
+  
+  .container.animate .half-right:after {
+    animation: turn 0.5s linear forwards;
+  }
+  
+  .container.animate .half-left:after {
+    animation: turn 0.5s 0.5s linear forwards;
+  }
+  
+  @-moz-keyframes turn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  @-webkit-keyframes turn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  @-o-keyframes turn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  @keyframes turn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+  
